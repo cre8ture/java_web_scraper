@@ -1,0 +1,14 @@
+<!-- Thymeleaf template (src/main/resources/templates/form.html) -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form action="#" th:action="@{/scrape}" method="post">
+    <textarea name="websites" placeholder="Enter websites separated by space or comma"></textarea><br>
+    <input type="text" name="search" placeholder="Enter search string" th:value="${search}"><br>
+    <input type="submit" value="Check">
+</form>
+<ul th:each="website : ${websites}">
+    <li th:text="${website}"></li>
+</ul>
+</body>
+</html>
